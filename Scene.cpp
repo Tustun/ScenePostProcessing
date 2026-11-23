@@ -506,8 +506,7 @@ void PostProcessing(float frameTime)
 	if (gCurrentPostProcess == PostProcess::Tint)
 	{
 		gD3DContext->PSSetShader(gTintPostProcess, nullptr, 0);
-		gPostProcessingConstants.tintColour = { 1, 0, 0 };
-		gPostProcessingConstants.tintColour/* = ?? FILTER - Make a nice colour*/;
+		//gPostProcessingConstants.tintColour/* = ?? FILTER - Make a nice colour*/;
 	}
 
 
