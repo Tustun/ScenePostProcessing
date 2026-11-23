@@ -31,7 +31,7 @@ float4 main(PostProcessingInput input) : SV_Target
 
 	// Get scene pixel colour and average r, g & b to get a single grey value
 	float3 sceneColour = SceneTexture.Sample(PointSample, input.uv).rgb;
-    float grey = 0/*FILTER - not 0, but a method to convert the r,g & b of texColour to a single grey-scale value (result in range 0->1)*/;
+    float grey = 0/*FILTER - not 0, but a method to convert the r,g & b of sceneColour to a single grey-scale value (result in range 0->1)*/;
 
 	// Get noise UV by scaling and offseting scene texture UV. Scaling adjusts how fine the noise is.
 	// The offset is randomised every frame (in C++) to give a constantly changing noise effect (like tv static)
